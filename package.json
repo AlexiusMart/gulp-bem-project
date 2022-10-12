@@ -9,6 +9,7 @@
     "type": "git",
     "url": "git+https://github.com/iStre1ok/gulp-bem-project.git"
   },
+  "description": "",
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -25,5 +26,9 @@
     "gulp-sass": "^5.1.0",
     "sass": "^1.55.0"
   },
-  "description": ""
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "not dead"
+  ]
 }
