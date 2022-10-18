@@ -1,4 +1,4 @@
-"use strict"
+'use strict'
 
 const slider = tns({
   container: '.carousel__inner',
@@ -26,8 +26,23 @@ function tabClick(event) {
   [...tabs].forEach((tab, i) => {
     tab.classList.remove('catalog__tab_active');
     sections[i].classList.remove('catalog__content_active');
-  })
+  });
   
   tabs[tabId - 1].classList.add('catalog__tab_active');
   sections[tabId - 1].classList.add('catalog__content_active');
+}
+
+
+const links = document.getElementsByClassName('catalog-item__link');
+const productFronts = document.getElementsByClassName('catalog-item__front-product');
+const productBacks = document.getElementsByClassName('catalog-item__back-product');
+
+[...links].forEach((tab, i) => tab.addEventListener('click', (event) => tabClickLink(event, i)));
+
+function tabClickLink(event, i) {
+  event.preventDefault();
+
+  productFronts[i - 1].classList.toggle('catalog-item__front-product_active');
+  productBacks[i - 1].classList.toggle('catalog-item__back-product_active');
+
 }
