@@ -1,5 +1,6 @@
 'use strict'
 
+//slide
 const slider = tns({
   container: '.carousel__inner',
   nav: false,
@@ -14,7 +15,7 @@ document.querySelector('.next').addEventListener('click', function () {
   slider.goTo('next');
 });
 
-
+// tabs
 const tabs = document.getElementsByClassName('catalog__tab');
 const sections = document.getElementsByClassName('catalog__content');
 
@@ -32,7 +33,7 @@ function tabClick(event) {
   sections[tabId - 1].classList.add('catalog__content_active');
 }
 
-
+// description product
 const links = document.getElementsByClassName('catalog-item__link');
 const productFronts = document.getElementsByClassName('catalog-item__front-product');
 const productBacks = document.getElementsByClassName('catalog-item__back-product');
@@ -42,7 +43,7 @@ const productBacks = document.getElementsByClassName('catalog-item__back-product
 function tabClickLink(event, i) {
   event.preventDefault();
 
-  productFronts[i - 1].classList.toggle('catalog-item__front-product_active');
-  productBacks[i - 1].classList.toggle('catalog-item__back-product_active');
+  productFronts[i].classList.toggle('catalog-item__front-product_active');
+  productBacks[i].classList.toggle('catalog-item__back-product_active');
 
 }
