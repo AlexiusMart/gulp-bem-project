@@ -47,3 +47,53 @@ function tabClickLink(event, i) {
   productBacks[i].classList.toggle('catalog-item__back-product_active');
 
 }
+
+// modal
+const blockConsultation = document.querySelectorAll('.overlay, #consulting');
+const blockOrder = document.querySelectorAll('.overlay, #order');
+const buttonsConsultation = document.querySelectorAll('[data-modal="consultation"]');
+const buttonsClose = document.querySelectorAll('.modal__close');
+const buttonProduct = document.querySelectorAll('.button__buy');
+const titleProduct = document.querySelectorAll('.catalog-item__subtitle');
+const modalSub = document.querySelectorAll('.modal__subtitle');
+
+[...buttonsConsultation].forEach((but) => but.addEventListener('click', fadeInCons));
+
+function fadeInCons() {
+  [...blockConsultation].forEach((elem) => {
+    elem.style.display = 'block';
+  });
+}
+
+
+
+[...titleProduct].forEach((ele) => ele.addEventListener('click', replaceTitle));
+
+function replaceTitle() {
+
+  // [...titleProduct].forEach(() => {
+      modalSub.innerHTML = 777777;
+  // });
+}
+
+
+
+
+[...buttonProduct].forEach((but) => but.addEventListener('click', fadeInProd));
+
+function fadeInProd() {
+  [...blockOrder].forEach((elem) => {
+    elem.style.display = 'block';
+  });
+}
+
+[...buttonsClose].forEach((but) => but.addEventListener('click', fadeOut));
+
+function fadeOut() {
+  [...blockConsultation].forEach((elem) => {
+    elem.style.display = 'none';
+  });
+}
+
+
+
