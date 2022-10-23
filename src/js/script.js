@@ -95,13 +95,13 @@ function fadeOut() {
 
 //   function formValidate(form) {
 //     let error = 0;
-//     let formReq = document.querySelectorAll('_req');
+//     let formReq = document.querySelectorAll('._req');
 
 //     for (let i = 0; i < formReq.length; i++) {
 //       const input = formReq[i];
 //       formRemoveError(input)
 
-//       if (input.classList.contains('_email')) {
+//       if (input.classList.contains('._email')) {
 //         if (emailTest(input)) {
 //           formAddError(input);
 //           error++;
@@ -128,5 +128,32 @@ function fadeOut() {
 //   }
 // });
 
+
 // wow js
 new WOW().init();
+
+// popup
+const btnUp = {
+  el: document.querySelector('.buttonup'),
+  show() {
+    this.el.classList.remove('buttonup_hidden');
+  },
+  hide() {
+    this.el.classList.add('buttonup_hidden')
+  },
+  addEventListener() {
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+      scrollY > 600 ? this.show() : this.hide();
+    });
+    document.querySelector('.buttonup').onclick = () => {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  }
+}
+
+btnUp.addEventListener();
