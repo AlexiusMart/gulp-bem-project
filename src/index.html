@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -454,11 +454,11 @@
             <div class="modal__close">&times;</div>
             <div class="modal__title">Просто заполните форму заявки</div>
             <div class="modal__subtitle">и мы перезвоним вам в течении 10 минут</div>
-            <form action="#" class="feed-form feed-form_mt25">
-                <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
-                <input name="email" required placeholder="Ваш E-mail" type="email">
-                <button class="button button_submit">заказать консультацию</button>
+            <form id="form" action="#" class="feed-form feed-form_mt25">
+                <div class="form__item"><input name="name" placeholder="Ваше имя" type="text" class="_req"></div>
+                <div class="form__item"><input name="phone" placeholder="Ваш телефон" type="number" class="_req"></div>
+                <div class="form__item"><input name="email" placeholder="Ваш E-mail" type="email" class="_req _email"></div>
+                <button type="submit" class="button button_submit">заказать консультацию</button>
             </form>
         </div>
 
@@ -480,6 +480,8 @@
             <div class="modal__subtitle">Наш менеджер свяжется с вами в ближайшее время!</div>
         </div>
     </div>
+
+    <a href="#up" class="buttonup"><img src="icons/circle-chevron-up-solid.svg" alt="вверх"></a>
 
     <script src="js/tiny-slider.min.js"></script>
     <script src="js/script.js"></script>
