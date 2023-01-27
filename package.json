@@ -15,9 +15,10 @@
   "bugs": {
     "url": "https://github.com/iStre1ok/gulp-bem-project/issues"
   },
-  "homepage": "https://github.com/iStre1ok/gulp-bem-project#readme",
+  "homepage": "https://istre1ok.github.io/gulp-bem-project/",
   "devDependencies": {
     "browser-sync": "^2.27.10",
+    "gh-pages": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",

@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 //slide
 const slider = tns({
@@ -18,6 +18,10 @@ document.querySelector('.next').addEventListener('click', function () {
 // tabs
 const tabs = document.getElementsByClassName('catalog__tab');
 const sections = document.getElementsByClassName('catalog__content');
+
+tabs.forEach((item) => {
+  item.style.transform = 'skewX(0)';
+});
 
 [...tabs].forEach(tab => tab.addEventListener('click', tabClick));
 
