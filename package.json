@@ -33,4 +33,7 @@
     "> 1%",
     "not dead"
   ]
+  "scripts": {
+    "deploy": "gh-pages -d build"
+  }
 }
